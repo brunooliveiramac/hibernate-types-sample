@@ -9,6 +9,7 @@ import com.vladmihalcea.hibernate.type.json.JsonStringType;
 import org.hibernate.annotations.TypeDef;
 import org.hibernate.annotations.TypeDefs;
 
+import javax.persistence.MappedSuperclass;
 import java.io.Serializable;
 
 @TypeDefs({
@@ -19,6 +20,7 @@ import java.io.Serializable;
         @TypeDef(name = "jsonb-node", typeClass = JsonNodeBinaryType.class),
         @TypeDef(name = "json-node", typeClass = JsonNodeStringType.class),
 })
+@MappedSuperclass
 public class BaseEntity implements Serializable{
 
 }
