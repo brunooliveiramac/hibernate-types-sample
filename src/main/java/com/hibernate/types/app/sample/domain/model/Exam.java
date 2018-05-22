@@ -9,11 +9,24 @@ public class Exam implements Serializable {
 
     private String name;
 
+    private Material material;
+
     public Exam() {
     }
 
-    public Exam(String name) {
+    public Exam(Integer id, String name) {
+        this.id = id;
         this.name = name;
+    }
+
+    public Exam(Integer id, String name, Material material) {
+        this.id = id;
+        this.name = name;
+        this.material = material;
+    }
+
+    public Material getMaterial() {
+        return material;
     }
 
     public Integer getId() {
