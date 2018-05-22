@@ -4,11 +4,12 @@ package com.hibernate.types.app.sample.domain.model;
 import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
+import java.util.List;
 
 
 @Entity(name = "sample")
 @Table(name = "sample")
-public class Sample extends BaseEntity{
+public class Sample extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -16,13 +17,16 @@ public class Sample extends BaseEntity{
 
     @Type(type = "json")
     @Column(columnDefinition = "json")
-    private ExamOrder exams;
+    private List<Exam> exams;
 
-    public ExamOrder getExams() {
+    public Sample() {
+    }
+
+    public List<Exam> getExams() {
         return exams;
     }
 
-    public void setExams(ExamOrder exams) {
+    public void setExams(List<Exam> exams) {
         this.exams = exams;
     }
 

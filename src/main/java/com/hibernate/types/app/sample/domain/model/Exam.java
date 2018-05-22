@@ -2,14 +2,17 @@ package com.hibernate.types.app.sample.domain.model;
 
 import java.io.Serializable;
 
+public class Exam implements Serializable {
 
-public class ExamOrder implements Serializable {
 
     private Integer id;
 
     private String name;
 
-    public ExamOrder(String name) {
+    public Exam() {
+    }
+
+    public Exam(String name) {
         this.name = name;
     }
 
